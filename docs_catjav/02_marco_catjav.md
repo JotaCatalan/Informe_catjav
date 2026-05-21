@@ -1,0 +1,27 @@
+## Tabla Comparativa — Marco Jurídico Aplicable al Caso NHS–WannaCry (2017)
+
+| Ley / Regulación | Jurisdicción | Artículos aplicables al caso | Aplicación específica en NHS–WannaCry (2017) | Efectividad estimada | Observaciones |
+|------------------|--------------|------------------------------|-----------------------------------------------|----------------------|----------------|
+| **Ley 19.223 sobre Delitos Informáticos** | Chile | **Art. 1:** destrucción o inutilización de sistemas. <br> **Art. 3:** alteración, daño o destrucción de datos. | El ransomware WannaCry inutilizó computadores hospitalarios, bloqueó acceso a historias clínicas y afectó sistemas médicos del NHS. Podría configurarse como **sabotaje informático** y daño de datos. | **Media – Baja** | La Ley 19.223 fue diseñada para amenazas informáticas previas a malware moderno, ransomware automatizado y ataques transnacionales. Carecía de tipificaciones específicas sobre herramientas de intrusión, malware avanzado y propagación automática. |
+| **Ley 21.459 sobre Delitos Informáticos** | Chile | **Art. 1:** ataque a la integridad del sistema. <br> **Art. 2:** acceso ilícito. <br> **Art. 4:** ataque a la integridad de datos. <br> **Art. 8:** abuso de dispositivos. | WannaCry explotó vulnerabilidades SMB (EternalBlue), realizó acceso no autorizado, cifró archivos hospitalarios, interrumpió sistemas clínicos y utilizó malware especializado para propagación masiva. | **Alta** | Es probablemente uno de los marcos chilenos más adecuados para analizar WannaCry. Su alineación con el Convenio de Budapest permite abordar ransomware, exploits y malware moderno con mayor precisión jurídica. |
+| **Directiva (UE) 2024/1385 — Cyber Solidarity Act** | Unión Europea | **Capítulos sobre:** <br> • Detección temprana. <br> • Coordinación de incidentes de gran escala. <br> • Cybersecurity Emergency Mechanism. <br> • Cybersecurity Reserve. | Aunque posterior al ataque, un evento equivalente a WannaCry activaría cooperación europea, inteligencia compartida, equipos de respuesta rápida y apoyo operacional para infraestructura crítica sanitaria. | **Alta (preventiva / reactiva)** | No tipifica delitos penales directamente. Su fortaleza radica en **respuesta coordinada, resiliencia y cooperación multinacional**, aspectos cruciales en ataques tipo ransomware global. No aplicable retroactivamente a 2017. |
+| **Computer Misuse Act 1990 (Reino Unido) — versión vigente en 2017** | Reino Unido | **Section 1:** Unauthorised Access. <br> **Section 2:** Access with intent to commit further offences. <br> **Section 3:** Unauthorised acts impairing operation of computers. <br> **Section 3A:** Making / supplying hacking tools. <br> **Section 3ZA:** Serious Damage Offences. | WannaCry encaja directamente como acceso no autorizado, afectación deliberada de sistemas hospitalarios, uso de malware y generación de daños graves a infraestructura crítica sanitaria. | **Alta** | Era el principal marco legal aplicable en el Reino Unido durante el incidente. La inclusión de **Section 3ZA** resulta particularmente relevante por el impacto potencial sobre salud pública y servicios esenciales. |
+| **Marco legislativo del Reino Unido sobre ciberdelitos (panorama 2026)** | Reino Unido | **Computer Misuse Act 1990 actualizado como base normativa.** <br> Complementado por: <br> • National Cyber Strategy. <br> • políticas NCSC. <br> • marcos de protección de infraestructura crítica. | Un “nuevo WannaCry” sería tratado bajo criterios ampliados de resiliencia nacional, protección sanitaria crítica, respuesta coordinada Estado-industria y cooperación internacional contra ransomware avanzado. | **Muy Alta** | El enfoque 2026 combina persecución penal con **gestión estratégica de riesgo**, ciberdefensa, inteligencia y protección de servicios esenciales. Presenta mayor madurez institucional frente a amenazas complejas. |
+
+---
+
+### Comparación General de Efectividad frente al Caso NHS–WannaCry
+
+| Marco Jurídico | Capacidad Penal | Capacidad Preventiva | Manejo de Infraestructura Crítica | Adaptación a Ransomware Moderno |
+|----------------|-----------------|----------------------|-----------------------------------|---------------------------------|
+| Ley 19.223 (Chile) | Media | Baja | Baja | Baja |
+| Ley 21.459 (Chile) | Alta | Media | Media–Alta | Alta |
+| Directiva UE 2024/1385 | Baja (penal) | Muy Alta | Muy Alta | Alta |
+| Reino Unido — CMA 2017 | Alta | Media | Alta | Alta |
+| Reino Unido — Marco 2026 | Muy Alta | Muy Alta | Muy Alta | Muy Alta |
+
+### Conclusión Técnica–Jurídica
+
+El caso **NHS–WannaCry (2017)** demuestra la evolución del derecho penal informático frente a amenazas de ransomware global. Mientras la **Ley 19.223 chilena** habría permitido una persecución parcial basada en sabotaje y daño informático, la **Ley 21.459** ofrece una cobertura significativamente más completa mediante figuras como acceso ilícito, ataque a sistemas, ataque a datos y abuso de dispositivos.
+
+En el ámbito internacional, el **Computer Misuse Act del Reino Unido** ya poseía herramientas robustas para abordar este tipo de incidentes en 2017, especialmente respecto a acceso no autorizado y afectación grave de sistemas críticos. Finalmente, la **Directiva (UE) 2024/1385** y el **marco británico 2026** muestran una evolución hacia modelos centrados en resiliencia operativa, coordinación multinacional y protección de infraestructura esencial.
