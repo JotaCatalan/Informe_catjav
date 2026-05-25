@@ -1,1 +1,88 @@
 @import "tailwindcss";
+
+:root{
+  --brand: #A2231D;
+  --brand-2: #E24B3B;
+  --accent: #FFD166;
+  --violet: #7C1DA2;
+  --glass: rgba(255,255,255,0.06);
+}
+
+/* Fondo llamativo y colorido */
+.gradient-llamativo {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 40%, var(--accent) 70%, var(--violet) 100%);
+  color: #fff;
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Botón principal llamativo */
+.btn-brand {
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 65%);
+  color: #fff;
+  padding: .6rem 1rem;
+  border-radius: .6rem;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(162,35,29,0.36), 0 2px 8px rgba(124,29,162,0.12);
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.btn-brand:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(226,75,59,0.48), 0 6px 18px rgba(124,29,162,0.18);
+}
+
+/* Botón con resplandor */
+.btn-glow {
+  background: var(--brand);
+  color: #fff;
+  padding: .5rem .9rem;
+  border-radius: .5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 18px rgba(162,35,29,0.6);
+  transition: box-shadow .18s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 34px rgba(226,75,59,0.9), 0 12px 30px rgba(124,29,162,0.14);
+}
+
+/* Tarjeta destacada */
+.card-accent {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-left: 6px solid var(--brand);
+  padding: 1rem;
+  border-radius: .8rem;
+  box-shadow: 0 8px 24px rgba(10,10,10,0.28);
+}
+
+/* Texto y distintivos */
+.text-brand { color: var(--brand); }
+.badge-brand {
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 100%);
+  color: #fff;
+  padding: .25rem .5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(162,35,29,0.28);
+}
+
+/* Fondo sutil con patrón */
+.footer-pattern {
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0) 2px),
+    radial-gradient(circle at 85% 75%, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0) 2px),
+    linear-gradient(180deg, rgba(162,35,29,0.08), rgba(124,29,162,0.04));
+}
+
+/* Utilidades */
+.glow-outline {
+  box-shadow: 0 0 12px rgba(162,35,29,0.55);
+  outline: 2px solid rgba(162,35,29,0.12);
+  outline-offset: 4px;
+}
