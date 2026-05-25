@@ -1,4 +1,4 @@
-import { ShieldCheck, ShieldLock, ShieldAlert } from 'lucide-react'
+import { ShieldCheck, Shield, ShieldAlert } from 'lucide-react'
 
 const markdownSource = `# Biblioteca de Prompts de Javier Catalán — APA 7ª Edición
 

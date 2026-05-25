@@ -6,7 +6,7 @@ import Comparacion from './components/Comparacion'
 import Responsabilidades from './components/Responsabilidades'
 import Datos from './components/Datos'
 import Conclusiones from './components/Conclusiones'
-import Prompts from './components/Prompts'
+import Prompt from './components/prompt'
 
 function App() {
 	return (
