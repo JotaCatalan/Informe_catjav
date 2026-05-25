@@ -103,9 +103,10 @@ function parseMarkdown(text) {
 }
 
 function getStageIcon(index) {
-  const icons = [ShieldLock, ShieldCheck, ShieldAlert]
-  return icons[index % icons.length] || ShieldLock
+  const icons = [ShieldCheck, ShieldAlert]
+  return icons[index % icons.length] || ShieldCheck
 }
+
 
 function Prompt() {
   const { title, intro, stages } = parseMarkdown(markdownSource)
