@@ -1,7 +1,8 @@
-# Biblioteca de Prompts de Javier Catalán — APA 7ª Edición
+import { ShieldCheck, ShieldLock, ShieldAlert } from 'lucide-react'
+
+const markdownSource = `# Biblioteca de Prompts de Javier Catalán — APA 7ª Edición
 
 Lista ordenada de prompts usados en este chat, presentados con autor y fecha en estilo APA, con subtítulos claros para cada etapa del proceso.
-
 
 ## Etapa 1: Prompts específicos de WannaCry y análisis jurídico
 
@@ -54,3 +55,105 @@ Lista ordenada de prompts usados en este chat, presentados con autor y fecha en 
 21. Catalán, J. (2026). "Crea src/components/conclusiones.jsx. Usa React JSX + Tailwind CSS. Convierte el siguiente markdown en un componente visual. [PEGAR 07_conclusiones_catjav.md]"
 
 22. Catalán, J. (2026). "agrega los siguientes prompts al archivo 08_prompts_catjav.md Siguiendo el mismo formato siendo el usuario que creo los prompts Javier Catalan 15: \"se necesita agregar informacion al markdown 06_Datos_catjav.md en formato visual code que siga lo siguiente: \" Tratamiento de datos según la Ley 19.628 chile: tipos, distinción personales/sensibles y derechos ARCO.\" el resultado debe tener: - explicacion de la ley 19.628 - porque es importante para este informe - como se implementaria la ley si hubiera pasado en chile\" 16: \"desarrolla de manera profesional en formato markdown el resumen de lo desarrollado durante todos estos prompts. Debe incluir: - El marco general del caso wannacry - La gravedad de los delitos - Como se desarrollaron las comparaciones - Quien/es fueron los responsables - Porque se realizaron todos estos robos de datos cada parte debe tener al menos un párrafo\" tambien agrega todos los prompts usados el dia de hoy y que tenga la enumeracion del 17 en adelante"
+`
+
+function parseMarkdown(text) {
+  const lines = text.split('\n')
+  const nodes = []
+  let currentStage = null
+  let title = ''
+  let introLines = []
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const rawLine = lines[index]
+    const line = rawLine.trim()
+
+    if (line.startsWith('# ')) {
+      title = line.replace('# ', '')
+      continue
+    }
+
+    if (line.startsWith('## ')) {
+      if (currentStage) {
+        nodes.push(currentStage)
+      }
+      currentStage = {
+        title: line.replace('## ', ''),
+        prompts: [],
+      }
+      continue
+    }
+
+    const promptMatch = line.match(/^(\d+)\.\s+(.*)$/)
+    if (promptMatch && currentStage) {
+      currentStage.prompts.push({ number: promptMatch[1], text: promptMatch[2] })
+      continue
+    }
+
+    if (!currentStage && line !== '') {
+      introLines.push(line)
+    }
+  }
+
+  if (currentStage) {
+    nodes.push(currentStage)
+  }
+
+  return { title, intro: introLines.join(' '), stages: nodes }
+}
+
+function getStageIcon(index) {
+  const icons = [ShieldLock, ShieldCheck, ShieldAlert]
+  return icons[index % icons.length] || ShieldLock
+}
+
+function Prompt() {
+  const { title, intro, stages } = parseMarkdown(markdownSource)
+
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_80px_-32px_rgba(15,23,42,0.08)]">
+        <div className="bg-gradient-to-r from-slate-950 via-cyan-700 to-slate-900 px-6 py-8 sm:px-8">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/80">Biblioteca de Prompts</p>
+              <h1 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">{title}</h1>
+            </div>
+          </div>
+          {intro && <p className="mt-6 max-w-3xl text-slate-200 leading-7">{intro}</p>}
+        </div>
+
+        <div className="space-y-6 bg-slate-50 px-6 py-8 sm:px-8 sm:py-10">
+          {stages.map((stage, stageIndex) => {
+            const StageIcon = getStageIcon(stageIndex)
+            return (
+              <div key={stage.title} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm">
+                <div className="flex flex-col gap-4 border-b border-slate-200 bg-slate-900 px-6 py-6 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-center gap-4 text-white">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-cyan-500/15 text-cyan-300 shadow-lg shadow-cyan-500/20">
+                      <StageIcon className="h-6 w-6" />
+                    </span>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.35em] text-cyan-200/80">Etapa {stageIndex + 1}</p>
+                      <h2 className="text-xl font-semibold text-white">{stage.title}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4 px-6 py-6">
+                  {stage.prompts.map((prompt) => (
+                    <div key={prompt.number} className="rounded-3xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                      <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Prompt {prompt.number}</p>
+                      <p className="mt-2 text-slate-700 leading-7">{prompt.text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Prompt
