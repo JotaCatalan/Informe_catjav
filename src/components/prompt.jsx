@@ -40,7 +40,7 @@ Lista ordenada de prompts usados en este chat, presentados con autor y fecha en 
 
 ## Etapa 4: arreglos de los md faltantes y creacion de los ultimos components
 
-15. Catalán, J. (2026). "se necesita agregar informacion al markdown 06_Datos_catjav.md en formato visual code que siga lo siguiente: \"Tratamiento de datos según la Ley 19.628 chile: tipos, distinción personales/sensibles y derechos ARCO.\" el resultado debe tener: - explicacion de la ley 19.628 - porque es importante para este informe - como se implementaria la ley si hubiera pasado en chile"
+15. Catalán, J. (2026). "se necesita agregar informacion al markdown 06_Datos_catjav.md en formato visual code que siga lo siguiente: "Tratamiento de datos según la Ley 19.628 chile: tipos, distinción personales/sensibles y derechos ARCO." el resultado debe tener: - explicacion de la ley 19.628 - porque es importante para este informe - como se implementaria la ley si hubiera pasado en chile"
 
 16. Catalán, J. (2026). "desarrolla de manera profesional en formato markdown el resumen de lo desarrollado durante todos estos prompts. Debe incluir: - El marco general del caso wannacry - La gravedad de los delitos - Como se desarrollaron las comparaciones - Quien/es fueron los responsables - Porque se realizaron todos estos robos de datos cada parte debe tener al menos un párrafo"
 
@@ -54,13 +54,13 @@ Lista ordenada de prompts usados en este chat, presentados con autor y fecha en 
 
 21. Catalán, J. (2026). "Crea src/components/conclusiones.jsx. Usa React JSX + Tailwind CSS. Convierte el siguiente markdown en un componente visual. [PEGAR 07_conclusiones_catjav.md]"
 
-22. Catalán, J. (2026). "agrega los siguientes prompts al archivo 08_prompts_catjav.md Siguiendo el mismo formato siendo el usuario que creo los prompts Javier Catalan 15: \"se necesita agregar informacion al markdown 06_Datos_catjav.md en formato visual code que siga lo siguiente: \" Tratamiento de datos según la Ley 19.628 chile: tipos, distinción personales/sensibles y derechos ARCO.\" el resultado debe tener: - explicacion de la ley 19.628 - porque es importante para este informe - como se implementaria la ley si hubiera pasado en chile\" 16: \"desarrolla de manera profesional en formato markdown el resumen de lo desarrollado durante todos estos prompts. Debe incluir: - El marco general del caso wannacry - La gravedad de los delitos - Como se desarrollaron las comparaciones - Quien/es fueron los responsables - Porque se realizaron todos estos robos de datos cada parte debe tener al menos un párrafo\" tambien agrega todos los prompts usados el dia de hoy y que tenga la enumeracion del 17 en adelante"
+22. Catalán, J. (2026). "agrega los siguientes prompts al archivo 08_prompts_catjav.md Siguiendo el mismo formato siendo el usuario que creo los prompts Javier Catalan 15: "se necesita agregar informacion al markdown 06_Datos_catjav.md en formato visual code que siga lo siguiente: " Tratamiento de datos según la Ley 19.628 chile: tipos, distinción personales/sensibles y derechos ARCO." el resultado debe tener: - explicacion de la ley 19.628 - porque es importante para este informe - como se implementaria la ley si hubiera pasado en chile" 16: "desarrolla de manera profesional en formato markdown el resumen de lo desarrollado durante todos estos prompts. Debe incluir: - El marco general del caso wannacry - La gravedad de los delitos - Como se desarrollaron las comparaciones - Quien/es fueron los responsables - Porque se realizaron todos estos robos de datos cada parte debe tener al menos un párrafo" tambien agrega todos los prompts usados el dia de hoy y que tenga la enumeracion del 17 en adelante"
 
 ## Etapa 5: solucion de error critico y modificaciones esteticas.
 
 23. Catalán, J. (2026). "crea src/components/prompt.jsx.
 
-Usa React JSX + Tailwind CSS."Convierte el siguiente markdown en un componente visual.""Debe incluir:""Iconos de lucide que tengan que ver con seguridad y proteccion""cada etapa de los prompts""Contenido:\[PEGAR 08_prompt_catjav.md]"
+Usa React JSX + Tailwind CSS."Convierte el siguiente markdown en un componente visual.""Debe incluir:""Iconos de lucide que tengan que ver con seguridad y proteccion""cada etapa de los prompts""Contenido:[PEGAR 08_prompt_catjav.md]"
 
 24. Catalán, J. (2026). "me esta saliendo el siguiente error al tratar de subir la siguiente pagina: Uncaught SyntaxError: The requested module '/node_modules/.vite/deps/lucide-react.js?v=c2769ab7' does not provide an export named 'ShieldLock' (at prompt.jsx:1:54)Understand this error 4(index):1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received necesito una solucion para que no salg la pagina en blanco"
 
